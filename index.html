@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Treding</title>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <style>
+        #chartdiv {
+      width: 100%;
+      height: 500px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav>
+                <a href="#!" class="logo">
+                    <img src="https://platform.ivacrp.ru/terminal/settings/menuButton/darkLogo.svg?nocache=1653161441130" alt="png" />
+                </a>
+                <div class="navbar_tools">
+                    <div class="room">
+                        <i class="fa-solid fa-share-from-square"></i>
+                        <p>Кабинет трейдера</p>
+                    </div>
+                    <div class="account">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Счет: <strong>11310</strong> Live</p>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-palette"></i></li>
+                        <li><i class="fa-solid fa-maximize"></i></li>
+                        <li><i class="fa-solid fa-border-all"></i></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page">
+            <div class="main">
+                <div class="main__top">
+                    <div class="menu">
+                        <div class="menu_tools">
+                            <div class="quotes">
+                                <p>Котировки</p>
+                            </div>
+                            <div class="toggle">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                        </div>
+                        <div class="menu_list">
+                            <table class="table">
+                                <tr class="list_title">
+                                    <th>Символ</th>
+                                    <th>Продажа</th>
+                                    <th>Покупка</th>
+                                </tr>
+                                <tr class="active">
+                                    <td>
+                                        <span><i class="fa-solid fa-play"></i></span> AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="active"><i class="fa-solid fa-play"></i></span>
+                                        AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><i class="fa-solid fa-play"></i></span> AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="active"><i class="fa-solid fa-play"></i></span>
+                                        AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><i class="fa-solid fa-play"></i></span> AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="active"><i class="fa-solid fa-play"></i></span>
+                                        AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><i class="fa-solid fa-play"></i></span> AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="active"><i class="fa-solid fa-play"></i></span>
+                                        AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span><i class="fa-solid fa-play"></i></span> AUDCAD
+                                    </td>
+                                    <td>0.74372</td>
+                                    <td>0.98282</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="addButton">
+                            <i class="fa-solid fa-plus"></i>
+                            <p>Добавить</p>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="graph_top">
+                            <ul>
+                                <li class="active">
+                                    <p>USDCAD</p>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </li>
+                                <li>
+                                    <p>USDCFH</p>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </li>
+                                <li>
+                                    <p>USDJPY</p>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </li>
+                            </ul>
+                            <button class="add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <div class="clicked-block1">
+                                <div class="left">
+                                    <div class="cart active">
+                                        <span>Все</span>
+                                        <span class="number">99</span>
+                                    </div>
+                                    <div class="cart">
+                                        <span>forex</span>
+                                        <span class="number">32</span>
+                                    </div>
+                                    <div class="cart">
+                                        <span>cdf</span>
+                                        <span class="number">43</span>
+                                    </div>
+                                    <div class="cart">
+                                        <span>metals</span>
+                                        <span class="number">3</span>
+                                    </div>
+                                    <div class="cart">
+                                        <span>index</span>
+                                        <span class="number">21</span>
+                                    </div>
+                                    <div class="cart">
+                                        <span>Crypto Сurrency</span>
+                                        <span class="number">0</span>
+                                    </div>
+                                </div>
+                                <div class="right" id="searchRight">
+                                    <div class="search">
+                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input type="text" name="" id="search" placeholder="Поиск..." onchange="filter()" />
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>3DsMAX</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCHF</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDJPY</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>3DsMAX</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>3DsMAX</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>3DsMAX</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                    <div class="right-divs">
+                                        <span>AUDCAD</span>
+                                        <h4>Australian Dollar vs Canadian Dollar</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph_diogramm">
+                            <div class="tools">
+                                <ul>
+                                    <li class="fa-displayList">
+                                        <i class="fa-solid fa-display"></i>
+                                    </li>
+                                    <li class="fa-chart-lineList">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </li>
+                                    <div class="clicked-block">
+                                        <div class="left">
+                                            <div class="cart active">
+                                                <span>Все</span>
+                                                <span class="number">99</span>
+                                            </div>
+                                            <div class="cart">
+                                                <span>forex</span>
+                                                <span class="number">32</span>
+                                            </div>
+                                            <div class="cart">
+                                                <span>cdf</span>
+                                                <span class="number">43</span>
+                                            </div>
+                                            <div class="cart">
+                                                <span>metals</span>
+                                                <span class="number">3</span>
+                                            </div>
+                                            <div class="cart">
+                                                <span>index</span>
+                                                <span class="number">21</span>
+                                            </div>
+                                            <div class="cart">
+                                                <span>Crypto Сurrency</span>
+                                                <span class="number">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="right" id="searchRight1">
+                                            <div class="search">
+                                                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                                <input type="text" name="" id="search1" placeholder="Поиск..." onchange="filter()" />
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>3DsMAX</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCHF</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDJPY</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>3DsMAX</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>3DsMAX</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>3DsMAX</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                            <div class="right-divs">
+                                                <span>AUDCAD</span>
+                                                <h4>Australian Dollar vs Canadian Dollar</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <li class="fa-clockList">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <div class="clockList-two">
+                                            <div class="top">
+                                                <span>S5 </span>
+                                                <span>M1 </span>
+                                                <span>M15</span>
+                                                <span>H1</span>
+                                                <span>D1</span>
+                                            </div>
+                                            <div class="bottom">
+                                                <span>
+                                                    Секунды
+                                                    <i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hoverDive">
+                                                        <span>S5</span>
+                                                        <span>S10</span>
+                                                        <span>S15</span>
+                                                        <span>S30</span>
+                                                    </div>
+                                                </span>
+                                                <span>Минуты<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hoverDive">
+                                                        <span>S5</span>
+                                                        <span>S10</span>
+                                                        <span>S15</span>
+                                                        <span>S30</span>
+                                                    </div>
+                                                </span>
+                                                <span>Часы<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hoverDive">
+                                                        <span>S5</span>
+                                                        <span>S10</span>
+                                                        <span>S15</span>
+                                                        <span>S30</span>
+                                                    </div>
+                                                </span>
+                                                <span>Дни<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hoverDive">
+                                                        <span>S5</span>
+                                                        <span>S10</span>
+                                                        <span>S15</span>
+                                                        <span>S30</span>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="fa-chart-columnList">
+                                        <i class="fa-solid fa-chart-column"></i>
+                                        <div class="block-cart-columns">
+                                            <div class="top">
+                                                <span>
+                                                    Трендовые <i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                                <span>Осцилляторы<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                                <span>Волатильность<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                                <span>Объемы<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                                <span>Разное<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                                <span>Билл Вильямс<i class="fa-solid fa-caret-right"></i>
+                                                    <div class="hover-dive-hovered">
+                                                        <span>Adaptive Moving Average</span>
+                                                        <span>Alligator</span>
+                                                        <span>DeMarker</span>
+                                                        <span>MACD</span>
+                                                        <span>Price Of Change</span>
+                                                        <span>William''s Percent Range</span>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="fa-circle-nodesList">
+                                        <i class="fa-solid fa-circle-nodes"></i>
+                                        <div class="circles">
+                                            <span>
+                                                <i class="fa-solid fa-circle-nodes"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-circle-nodes"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-circle-nodes"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-circle-nodes"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-circle-nodes"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><i class="fa-solid fa-plus"></i></li>
+                                    <li class="fa-slidersList">
+                                        <i class="fa-solid fa-sliders"></i>
+                                        <div class="actives_Chart">
+                                            <span>
+                                                <i class="fa-solid fa-sliders"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-sliders"></i>
+                                            </span>
+                                            <span>
+                                                <i class="fa-solid fa-sliders"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><i class="fa-solid fa-magnifying-glass-minus"></i></li>
+                                    <li><i class="fa-solid fa-magnifying-glass-plus"></i></li>
+                                    <li class="fa-gearList"><i class="fa-solid fa-gear"></i></li>
+                                </ul>
+                            </div>
+                            <div id="chartdiv"></div>
+                        </div>
+                    </div><!-- /.graph -->
+                </div>
+                <div class="trading-menu" data-role="splitter" data-split-mode="vertical">
+                    <div class="trading-menu__top">
+                        <div class="left">
+                            <p>Торговля</p>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </div>
+                    </div>
+                    <div class="trading-menu__body">
+                        <table class="trading-menu__table">
+                            <tbody>
+                                <tr class="head_tr">
+                                    <th>Символ</th>
+                                    <th>Номер</th>
+                                    <th>Тип</th>
+                                    <th>Объем</th>
+                                    <th>Дата открытия</th>
+                                    <th>Цена открытия</th>
+                                    <th>Дополнительные параметры</th>
+                                    <th>Текущая цена</th>
+                                    <th>Прибыль</th>
+                                </tr>
+                                <tr>
+                                    <th>EURUSD</th>
+                                    <th>108552</th>
+                                    <th>Buy</th>
+                                    <th>1.00 лот</th>
+                                    <th>02.06.2022 10:51</th>
+                                    <th>1.06860</th>
+                                    <th>Залог: 5500.00 / Своп: 20.01 / Комиссия: 0.00</th>
+                                    <th>10.215</th>
+                                    <th>51.47</th>
+                                </tr>
+                                <tr>
+                                    <th>SILVER</th>
+                                    <th>108551</th>
+                                    <th>Buy</th>
+                                    <th>0.10 лот</th>
+                                    <th>01.06.2022 8:11</th>
+                                    <th>0.261</th>
+                                    <th>Залог: 15.00 / Своп: 80.11 / Комиссия: 11.52</th>
+                                    <th>12.412</th>
+                                    <th>23.24</th>
+                                </tr>
+                                <tr>
+                                    <th>USDCHF</th>
+                                    <th>524621</th>
+                                    <th>Buy</th>
+                                    <th>20.25 лот</th>
+                                    <th>29.05.2022 2:21</th>
+                                    <th>0.221</th>
+                                    <th>Залог: 16.00 / Своп: 20..1 / Комиссия: 12.12</th>
+                                    <th>95.215</th>
+                                    <th>32.55</th>
+                                </tr>
+                                <tr>
+                                    <th>WTI</th>
+                                    <th>62154</th>
+                                    <th>Buy</th>
+                                    <th>25.32 лот</th>
+                                    <th>29.05.2022 1:44</th>
+                                    <th>1.01</th>
+                                    <th>Залог: 21.00 / Своп: 12..12 / Комиссия: 112.01</th>
+                                    <th>12.124</th>
+                                    <th>14.01</th>
+                                </tr>
+                                <tr>
+                                    <th>_AMZIN</th>
+                                    <th>321158</th>
+                                    <th>Buy</th>
+                                    <th>21.14 лот</th>
+                                    <th>16.05.2022 2:23</th>
+                                    <th>1.01</th>
+                                    <th>Залог: 21.00 / Своп: 12..12 / Комиссия: 112.01</th>
+                                    <th>12.124</th>
+                                    <th>14.01</th>
+                                </tr>
+                                <tr>
+                                    <th>WTI</th>
+                                    <th>108552</th>
+                                    <th>Buy</th>
+                                    <th>1.00 лот</th>
+                                    <th>02.06.2022 10:51</th>
+                                    <th>1.06860</th>
+                                    <th>Залог: 5500.00 / Своп: 20.01 / Комиссия: 0.00</th>
+                                    <th>10.215</th>
+                                    <th>51.47</th>
+                                </tr>
+                                <tr>
+                                    <th>_KO</th>
+                                    <th>108551</th>
+                                    <th>Buy</th>
+                                    <th>0.10 лот</th>
+                                    <th>01.06.2022 8:11</th>
+                                    <th>0.261</th>
+                                    <th>Залог: 15.00 / Своп: 80.11 / Комиссия: 11.52</th>
+                                    <th>12.412</th>
+                                    <th>23.24</th>
+                                </tr>
+                                <tr>
+                                    <th>_MCD</th>
+                                    <th>524621</th>
+                                    <th>Buy</th>
+                                    <th>20.25 лот</th>
+                                    <th>29.05.2022 2:21</th>
+                                    <th>0.221</th>
+                                    <th>Залог: 16.00 / Своп: 20..1 / Комиссия: 12.12</th>
+                                    <th>95.215</th>
+                                    <th>32.55</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /.trading-menu__body -->
+                </div><!-- /.trading-menu -->
+            </div>
+            <div class="menu-right">
+                <div class="menu-right__order order market-order market-order-menu">
+                    <div class="order__title">Новый рыночный ордер</div>
+                    <div class="order__content">
+                        <div class="top_center">
+                            <div class="order__input">
+                                <p>Символ:</p>
+                                <select class="input input-select input-select-light" name="" id="">
+                                    <option value="">AUDUSD</option>
+                                    <option value="">AUDUSD</option>
+                                    <option value="">AUDUSD</option>
+                                    <option value="">AUDUSD</option>
+                                    <option value="">AUDUSD</option>
+                                </select>
+                                <p>Australian Dollar vs US Dollar</p>
+                                <p>1 пункт: <span>0.09</span> Залог: <span>33.65</span></p>
+                            </div>
+                            <div class="order__input">
+                                <p>Объем:</p>
+                                <select class="input input-select" name="" id="">
+                                    <option value="">0.10</option>
+                                    <option value="">0.20</option>
+                                    <option value="">0.30</option>
+                                    <option value="">0.40</option>
+                                    <option value="">0.50</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="center_center">
+                            <h3><span>0.71780</span> / <span>0.71791</span></h3>
+                            <div class="order__buttons">
+                                <button class="order__button button-sell button button-red"><i class="fa-solid fa-play"></i> Продать</button>
+                                <button class="order__button button-buy button button-green"><i class="fa-solid fa-play"></i> Купить</button>
+                            </div>
+                        </div>
+                        <div class="order__bottom">
+                            <form action="">
+                                <p>
+                                    Ограничения: <input type="radio" name="gender" id="" />
+                                    <span>Нет</span>
+                                </p>
+                                <p>
+                                    <input type="radio" name="gender" id="" />
+                                    <span>По пунктам</span>
+                                </p>
+                                <p>
+                                    <input type="radio" name="gender" id="" /> <span>По ценам</span>
+                                </p>
+                            </form>
+                            <div class="inputs">
+                                <form action="">
+                                    <label for="nameee">Take profit:</label>
+                                    <input type="number" id="nameee" />
+                                    <label for="nameee1">Stop loss:</label>
+                                    <input type="number" id="nameee1" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.market-order-menu -->
+                <div class="menu-right__order order schedule-order schedule-order-menu">
+                    <div class="order__title">Новый отложенный ордер</div>
+                    <div class="tabs order__tabs">
+                        <ul class="tabs__items">
+                            <li class="tab order__tab active">
+                                <p>Buy Limit</p>
+                            </li>
+                            <li class="tab order__tab">
+                                <p>Sell Limit</p>
+                            </li>
+                            <li class="tab order__tab">
+                                <p>Buy Stop</p>
+                            </li>
+                            <li class="tab order__tab">
+                                <p>Sell Stop</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order__content">
+                        <div class="order__content-container container-order">
+                            <div class="container-order__left">
+                                <div class="PendingOrderImg BuyLimit">
+                                    <div class="SymbolPrice">1,25380</div>
+                                    <div class="MyPrice">1,25429</div>
+                                </div>
+                            </div>
+                            <div class="container-order__right">
+                                <div class="order__input">
+                                    <p>Символ:</p>
+                                    <select class="input input-select input-select-light" name="" id="">
+                                        <option value="">AUDUSD</option>
+                                        <option value="">AUDUSD</option>
+                                        <option value="">AUDUSD</option>
+                                        <option value="">AUDUSD</option>
+                                        <option value="">AUDUSD</option>
+                                    </select>
+                                    <p>Australian Dollar vs US Dollar</p>
+                                </div>
+                                <div class="order__input">
+                                    <p>Объем:</p>
+                                    <select class="input input-select" name="" id="">
+                                        <option value="">0.10</option>
+                                        <option value="">0.20</option>
+                                        <option value="">0.30</option>
+                                        <option value="">0.40</option>
+                                        <option value="">0.50</option>
+                                    </select>
+                                </div>
+                                <div class="order__input">
+                                    <p>Цена:</p>
+                                    <input type="number" class="input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__buttons">
+                            <button class="order__button button button-green">Поставить</button>
+                        </div>
+                    </div>
+                    <div class="order__bottom">
+                        <form action="">
+                            <p>
+                                Ограничения: <input type="radio" name="gender" id="" />
+                                <span>Нет</span>
+                            </p>
+                            <p>
+                                <input type="radio" name="gender" id="" />
+                                <span>По пунктам</span>
+                            </p>
+                            <p>
+                                <input type="radio" name="gender" id="" /> <span>По ценам</span>
+                            </p>
+                        </form>
+                        <div class="inputs">
+                            <form action="">
+                                <label for="nameee">Take profit:</label>
+                                <input type="number" id="nameee" />
+                                <label for="nameee1">Stop loss:</label>
+                                <input type="number" id="nameee1" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.shceduled-order-menu -->
+    </div><!-- /.menu-right -->
+    <div class="clicked-block2">
+        <div class="left">
+            <div class="cart">
+                <span>Все</span>
+                <span class="number">99</span>
+            </div>
+            <div class="cart">
+                <span>forex</span>
+                <span class="number">32</span>
+            </div>
+            <div class="cart active">
+                <span>cdf</span>
+                <span class="number">43</span>
+            </div>
+            <div class="cart">
+                <span>metals</span>
+                <span class="number">3</span>
+            </div>
+            <div class="cart">
+                <span>index</span>
+                <span class="number">21</span>
+            </div>
+            <div class="cart">
+                <span>Crypto Сurrency</span>
+                <span class="number">0</span>
+            </div>
+        </div>
+        <div class="right" id="searchRight2">
+            <div class="search">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" name="" id="search2" placeholder="Поиск..." onchange="filter()" />
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>3DsMAX</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCHF</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDJPY</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>3DsMAX</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>3DsMAX</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>3DsMAX</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+            <div class="right-divs">
+                <span>AUDCAD</span>
+                <h4>Australian Dollar vs Canadian Dollar</h4>
+            </div>
+        </div>
+    </div><!-- /.cliecked-block2 -->
+    </main>
+    <footer>
+        <div class="footer_item">
+            <div class="statistics">
+                <ul>
+                    <li>
+                        <p>Средства: <span>$0.00</span></p>
+                    </li>
+                    <li>
+                        <p>Прибыль: <span>$0.00</span></p>
+                    </li>
+                    <li>
+                        <p>Свободные: <span>$0.00</span></p>
+                    </li>
+                    <li>
+                        <p>Залог: <span>$0.00</span></p>
+                    </li>
+                    <li>
+                        <p>Уровень: <span>$0.00</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="iva">
+                <i class="fa-solid fa-infinity"></i>
+                <p>IVA <span>22:49:31</span></p>
+            </div>
+        </div>
+    </footer>
+    <div class="order order-window market-order">
+        <div class="order__title">Новый рыночный ордер</div>
+        <div class="order__close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="order__content">
+            <div class="top_center">
+                <div class="order__input">
+                    <p>Символ:</p>
+                    <select class="input input-select input-select-light" name="" id="">
+                        <option value="">AUDUSD</option>
+                        <option value="">AUDUSD</option>
+                        <option value="">AUDUSD</option>
+                        <option value="">AUDUSD</option>
+                        <option value="">AUDUSD</option>
+                    </select>
+                    <p>Australian Dollar vs US Dollar</p>
+                    <p>1 пункт: <span>0.09</span> Залог: <span>33.65</span></p>
+                </div>
+                <div class="order__input">
+                    <p>Объем:</p>
+                    <select class="input input-select" name="" id="">
+                        <option value="">0.10</option>
+                        <option value="">0.20</option>
+                        <option value="">0.30</option>
+                        <option value="">0.40</option>
+                        <option value="">0.50</option>
+                    </select>
+                </div>
+            </div>
+            <div class="center_center">
+                <h3><span>0.71780</span> / <span>0.71791</span></h3>
+                <div class="order__buttons">
+                    <button class="order__button button-sell button button-red"><i class="fa-solid fa-play"></i> Продать</button>
+                    <button class="order__button button-buy button button-green"><i class="fa-solid fa-play"></i> Купить</button>
+                </div>
+            </div>
+            <div class="order__bottom">
+                <form action="">
+                    <p>
+                        Ограничения: <input type="radio" name="gender" id="" />
+                        <span>Нет</span>
+                    </p>
+                    <p>
+                        <input type="radio" name="gender" id="" />
+                        <span>По пунктам</span>
+                    </p>
+                    <p>
+                        <input type="radio" name="gender" id="" /> <span>По ценам</span>
+                    </p>
+                </form>
+                <div class="inputs">
+                    <form action="">
+                        <label for="nameee">Take profit:</label>
+                        <input type="number" id="nameee" />
+                        <label for="nameee1">Stop loss:</label>
+                        <input type="number" id="nameee1" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.market-order-window -->
+    </div>
+    <script src="./js/click.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/splitterbar.js"></script>
+</body>
+
+</html>
