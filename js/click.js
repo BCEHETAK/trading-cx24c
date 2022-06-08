@@ -279,7 +279,6 @@ for (var i = 0; i < menuListItems1.length; i++) {
     if (BuyDive.classList.contains("active")) {
       BuyDive.classList.remove("active");
     } else {
-      BuyDive.classList.add("active");
       WTMenu2.classList.remove("active");
       modal.classList.remove("active");
       WTMenu1.classList.remove("active");
@@ -294,7 +293,6 @@ closeOrder.addEventListener("click", function () {
   if (BuyDive.classList.contains("active")) {
     BuyDive.classList.remove("active");
   } else {
-    BuyDive.classList.add("active");
     WTMenu2.classList.remove("active");
     modal.classList.remove("active");
     WTMenu1.classList.remove("active");
